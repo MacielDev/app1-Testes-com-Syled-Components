@@ -6,6 +6,10 @@ export const ImageIcon = styled.img `
   width: 25px;
 `;
 
+export const ImageIconTema = styled(ImageIcon) `
+  filter:${({ theme })=> theme.filter};
+`;
+
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,7 +18,7 @@ export const Box = styled.div`
   box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
   padding: 20px;
   width: 48%;
-  background-color: white;
+  background-color: ${({theme})=> theme.inside};
 
   button{
     margin: 15px auto 0px auto;
@@ -37,4 +41,13 @@ export const Box = styled.div`
     margin: 5px;
   }
 
+`;
+
+export const BtnTema = styled.button `
+  position : absolute;
+  top: 4vh;
+  right: 20px;
+  background:inherit;
+  border: none;
+  cursor: pointer;
 `;
